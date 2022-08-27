@@ -13,7 +13,7 @@ service.interceptors.request.use(
     const jwtToken = localStorage.getItem(AUTH_TOKEN);
 
     if (jwtToken) {
-      if (!config.headers) config.headers = {};
+      if (config.headers && jwtToken) 
       config.headers["authorization"] = `Bearer ${jwtToken}`;
     }
 
