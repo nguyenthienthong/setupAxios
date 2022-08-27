@@ -7,5 +7,8 @@ const userService = {
   update: (id: string, data: Object) => {
     return service.put(`/users/${id}`, data);
   },
+  delete: (id: string, data: Object) => {
+    return service.put(`/users/${id}`, data);
+  },
 };
 export default userService;
